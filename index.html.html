@@ -77,47 +77,54 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .highlight {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header mit Logo -->
     <header>
         <img src="logo.png" alt="RPS Logo">
         <h1>RugPull Survivor Token</h1>
-        <p>"Rugged but resilient"</p>
+        <p class="highlight">"Rugged but resilient - Laugh at the rugs, thrive on success!"</p>
     </header>
 
     <!-- Rug Radar Tool -->
     <div class="section">
-        <h3>Rug Radar</h3>
-        <p>Enter a token name to check its safety:</p>
+        <h3>🔍 Rug Radar</h3>
+        <p>Check your token's safety score (just for fun):</p>
         <input type="text" id="tokenInput" placeholder="Enter Token Name">
         <button onclick="checkRugRisk()">Scan</button>
         <p id="rugResult" style="margin-top: 10px; font-weight: bold;"></p>
     </div>
 
-    <!-- Community Section -->
+    <!-- Community Sprüche -->
     <div class="section">
-        <h3>"I got rugged, but I'm still standing!"</h3>
-        <p>"The only pull you'll feel here is the pull to success."</p>
+        <h3>💬 Überlebende der Rug-Pulls</h3>
+        <p>"Ich wurde gerugged, aber ich lebe noch!"</p>
+        <p>"Den Boden des Teppichs gesehen und doch wieder aufgestanden."</p>
+        <p>"The only pull you'll feel here is <span class='highlight'>the pull to success</span>!"</p>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer mit Links -->
     <footer>
-        <p>Follow us on 
-            <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a> | 
-            <a href="#"><i class="fa-brands fa-discord"></i> Discord</a>
+        <p>Join our community on:  
+            <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a> |  
+            <a href="#"><i class="fa-brands fa-discord"></i> Discord</a>  
         </p>
         <p>&copy; 2024 RugPull Survivor Token</p>
     </footer>
 
+    <!-- JavaScript für Rug Radar -->
     <script>
         function checkRugRisk() {
             const risks = [
-                "97% Rug Risk Detected! Run!",
-                "Safe for now... but stay cautious.",
-                "This token is golden!",
-                "Too new to tell. Might be risky!"
+                "⚠️ 97% Rug Risk Detected! Run!",
+                "✅ Safe for now... but stay cautious.",
+                "🏆 This token is golden! 0% Rug Risk.",
+                "🤷 Too new to tell. Might be risky!"
             ];
             const result = risks[Math.floor(Math.random() * risks.length)];
             document.getElementById("rugResult").innerText = result;
@@ -125,4 +132,3 @@
     </script>
 </body>
 </html>
-
