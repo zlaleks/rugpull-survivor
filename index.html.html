@@ -1,134 +1,147 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RugPull Survivor Token</title>
     <link rel="icon" href="logo.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(to bottom, #dff6ff, #ffffff);
             color: #333;
         }
         header {
-            background-color: #ff4d4d;
-            color: #fff;
+            background: url('flying-carpet.png') center/cover no-repeat;
             text-align: center;
-            padding: 1em 0;
+            padding: 60px 20px;
+            color: #fff;
             position: relative;
         }
         header img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: 50px;
+            height: 80px;
         }
-        h1 {
-            margin: 0;
-        }
-        p {
+        header h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3em;
             margin: 10px 0;
         }
+        .rug-alert-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #ff4d4d;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .rug-alert-btn:hover {
+            background: #ff6666;
+            transform: scale(1.1);
+        }
         .section {
+            padding: 40px 20px;
             text-align: center;
-            margin: 30px auto;
+        }
+        .section h2 {
+            color: #ff4d4d;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .kachel {
+            display: inline-block;
+            margin: 20px;
             padding: 20px;
             background: #fff;
             border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            width: 250px;
         }
-        button {
-            background-color: #ff4d4d;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #ff6666;
-            transform: scale(1.05) translateY(-3px);
-        }
-        input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 80%;
-            margin: 10px 0;
+        .kachel:hover {
+            transform: translateY(-10px);
         }
         footer {
-            text-align: center;
             background: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 10px;
+            text-align: center;
         }
         footer a {
-            color: #ff4d4d;
+            color: gold;
             text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
         }
-        footer a:hover {
-            text-decoration: underline;
+        .newsletter {
+            margin-top: 20px;
         }
-        .highlight {
-            color: #ff4d4d;
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+        }
+        .newsletter button {
+            background: #ff4d4d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Header mit Logo -->
+    <!-- Header Section -->
     <header>
-        <img src="logo.png" alt="RPS Logo">
-        <h1>RugPull Survivor Token</h1>
-        <p class="highlight">"Rugged but resilient - Laugh at the rugs, thrive on success!"</p>
+        <img src="logo.png" alt="RugPull Survivor Logo">
+        <h1>RugPull Survivor</h1>
+        <a href="#" class="rug-alert-btn">Rug Alert!</a>
     </header>
 
-    <!-- Rug Radar Tool -->
+    <!-- Tokenomics Section -->
     <div class="section">
-        <h3>🔍 Rug Radar</h3>
-        <p>Check your token's safety score (just for fun):</p>
-        <input type="text" id="tokenInput" placeholder="Enter Token Name">
-        <button onclick="checkRugRisk()">Scan</button>
-        <p id="rugResult" style="margin-top: 10px; font-weight: bold;"></p>
+        <h2>Tokenomics</h2>
+        <div class="kachel">
+            <h3>Total Supply</h3>
+            <p>1,000,000,000 RPS</p>
+        </div>
+        <div class="kachel">
+            <h3>Community Allocation</h3>
+            <p>50% (500,000,000 RPS)</p>
+        </div>
+        <div class="kachel">
+            <h3>Reserve</h3>
+            <p>20% (200,000,000 RPS)</p>
+        </div>
     </div>
 
-    <!-- Community Sprüche -->
+    <!-- Community Section -->
     <div class="section">
-        <h3>💬 Überlebende der Rug-Pulls</h3>
-        <p>"Ich wurde gerugged, aber ich lebe noch!"</p>
-        <p>"Den Boden des Teppichs gesehen und doch wieder aufgestanden."</p>
-        <p>"The only pull you'll feel here is <span class='highlight'>the pull to success</span>!"</p>
+        <h2>Survivor Stories</h2>
+        <p>Coming soon... Share your success stories after surviving the rugs!</p>
     </div>
 
-    <!-- Footer mit Links -->
+    <!-- Footer Section -->
     <footer>
-        <p>Join our community on:  
-            <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a> |  
-            <a href="#"><i class="fa-brands fa-discord"></i> Discord</a>  
-        </p>
-        <p>&copy; 2024 RugPull Survivor Token</p>
+        <p>Join us on:</p>
+        <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fa-brands fa-discord"></i> Discord</a>
+        <div class="newsletter">
+            <p>Subscribe to our Newsletter:</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
     </footer>
-
-    <!-- JavaScript für Rug Radar -->
-    <script>
-        function checkRugRisk() {
-            const risks = [
-                "⚠️ 97% Rug Risk Detected! Run!",
-                "✅ Safe for now... but stay cautious.",
-                "🏆 This token is golden! 0% Rug Risk.",
-                "🤷 Too new to tell. Might be risky!"
-            ];
-            const result = risks[Math.floor(Math.random() * risks.length)];
-            document.getElementById("rugResult").innerText = result;
-        }
-    </script>
 </body>
 </html>
